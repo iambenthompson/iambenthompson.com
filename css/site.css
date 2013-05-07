@@ -1,0 +1,243 @@
+@import url("helpers/normalize.css");
+@import url("helpers/prettyPhoto/prettyPhoto.css");
+
+@font-face {
+  font-family: HNL;
+  src: local("Helvetica Neue Light"),
+       local("HelveticaNeue-Light");
+}
+
+html {
+/*	background: #D8D8D8; */
+	background-image: -o-radial-gradient(50% 116%, #2C3533 63%, #000000 100%);
+	background-image: -moz-radial-gradient(50% 116%, #2C3533 63%, #000000 100%);
+	background-image: -webkit-radial-gradient(50% 116%, #2C3533 63%, #000000 100%);
+	background-image: -ms-radial-gradient(50% 116%, #2C3533 63%, #000000 100%);
+	background-image: radial-gradient(50% 116%, #2C3533 63%, #000000 100%);
+}
+
+html, a {
+	font-family: HNL, sans-serif;
+	color: #787878;
+}
+
+header {
+	background: #1A1A1A;
+	width: 100%;
+	border-bottom-style: solid;
+	border-bottom-width: 0.063em;
+	border-bottom-color: #979797;
+}
+
+h1 {
+	float: left;
+	font-weight: normal;
+	margin:0 0 0 42px;
+	padding-top: 0.920em;
+	font-size: 2.438em;
+}
+
+nav {
+	text-align: right;
+	font-size: 1.375em;
+	padding-top: 2.310em;
+	padding-right: 0.5em;
+}	
+
+nav a{
+	text-decoration: none;
+	margin: 0 15px 0 0;
+}
+
+nav a:hover{
+	color: #CACACA;
+}
+
+#main {
+	clear: both;
+	padding-left: 42px;
+}
+
+#filters {
+	float: left;
+}
+
+#filters ul {
+	list-style: none;	
+    padding: 7px;
+    margin: 0 7px 0 0;
+    background-color: #333333;
+}
+
+#filters li {
+	padding: 5px;
+}
+
+#filters a {
+	text-decoration: none;
+}
+
+i.icon-money {
+	color: #82b978 !important;
+}
+i.icon-cogs {
+	color: #b6b9b3 !important;
+}
+.video i{
+	color: #b979ad !important;
+}
+.ideas i{
+	color: #cdc60c !important;
+}
+i.icon-beaker{
+	color: #cdc60c !important;
+}
+.design i{
+	color: #6ebbcd !important;
+}
+.3d i{
+	color: #cd6c53 !important;
+}
+.flash i{
+	color: #bb3037 !important;
+}
+.photography i{
+	color: #454dbb !important;
+}
+.retouching i{
+	color: #bb7c52 !important;
+}
+
+#gallery ul {
+	overflow-x: auto;
+	overflow-y: hidden;
+	list-style: none;	
+    padding:0;
+    margin-top: 8px;
+}
+
+#gallery.type {
+	width: 25.68em;
+	line-height: 1.288em;
+}
+
+#gallery li {
+	position: relative;
+	display: block;
+	float: left;
+/*	border: 1px solid #979797; */
+	margin: 0 12px 12px 0;
+	width: 12.63em;
+	height: 12.63em;
+	overflow: hidden;
+}
+
+#gallery img {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+#gallery li a .icons {
+	display: block;
+	text-decoration: none;
+	position: absolute;
+	background-color: rgba(25,25,25,0.8);
+	padding: 2px;
+	z-index: 3;
+	top: 0;
+	right: 0; 
+	width: auto;
+	text-align: right;
+	color: #e2e2e2;
+	font-size: 0.9em;
+
+	transition: right 0.2s;
+	-moz-transition: right 0.2s; /* Firefox 4 */
+	-webkit-transition: right 0.2s; /* Safari and Chrome */
+	-o-transition: right 0.2s; /* Opera */
+}
+
+/*
+#gallery li a > .icons { 
+	right: 0; 
+}
+
+#gallery li a:hover > .icons { 
+	right: -100%; 
+}
+*/
+
+#gallery .caption {
+	position: absolute;
+	background-color: rgba(25,25,25,0.8);;
+	z-index: 2;
+	top: 87%; 
+	width: 100%;
+	height: 100%;
+	color: #e2e2e2;
+	font-size: 0.9em;
+
+	transition: top 0.2s;
+	-moz-transition: top 0.2s; /* Firefox 4 */
+	-webkit-transition: top 0.2s; /* Safari and Chrome */
+	-o-transition: top 0.2s; /* Opera */
+}
+
+#gallery li a > .caption { 
+	top: 87%; 
+}
+
+#gallery li a:hover > .caption { 
+	top: 0; 
+}
+
+#gallery .caption h3 {
+	margin: 2px 4px 0 4px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #979797;
+}
+
+#gallery .caption p {
+	margin: 2px 4px 0 4px;
+}
+
+footer {
+	clear: both;
+	background: #1A1A1A;
+	width: 100%;
+	border-top-style: solid;
+	border-top-width: 0.063em;
+	border-top-color: #979797;
+	text-align: center;
+	color: #454545;
+	padding-top: 0.920em;
+	padding-bottom: 0.920em;
+	font-size: 1em;
+}
+
+.highlight {
+	color: #CACACA;
+}
+
+.lowlight {
+	color: #3A3A3A;
+}
+
+.ppt{
+	font-weight: bold;
+}
+
+.pp_description {
+	font-weight: bold;
+}
+
+.pp_code_sample_btn {
+	display: block;
+	float: right;
+	padding: 3px 10px;
+	background-color: #2699b3;
+	font-weight: bold;
+	color: #e8e8e8;
+}
