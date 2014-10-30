@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Media Dimensions - Lightwave 3D Integration</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style type="text/css">
+<!--
+body {
+	background-color: #18222B;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+
+<link href="css/allText.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function quicktimeWindow(qtname) {
+ var qtWin = window.open('./quicktimes/' + qtname + '.mov', 'QuicktimeSample','width=360,height=260')
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+a:link {
+	color: #FF9933;
+}
+a:visited {
+	color: #B75B00;
+}
+a:active {
+	color: #FFAE5E;
+}
+-->
+</style></head>
+
+<body>
+<table width="100%" height="100%"  border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="131" background="images/top_bg.jpg">&nbsp;</td>
+    <td width="800" height="131" align="center" valign="bottom" class="heading"><img src="images/top_bar.jpg" width="800" height="131" border="0" usemap="#Map"></td>
+    <td height="131" background="images/top_bg.jpg">&nbsp;</td>
+  </tr>
+  <tr bgcolor="#32383F">
+    <td class="bottom_bg">&nbsp;</td>
+    <td align="left" valign="top" class="bottom_bg">
+	
+	      <!--New Table (1 Row 2 Columns) -->
+		  
+	<table width="730" border="0" cellpadding="0" cellspacing="0" class="margins">
+      <tr>
+        <td align="left" valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="bottom"><p class="heading"><a href="javascript:quicktimeWindow('L3DInt')"><img src="images/l3DInt/objective.jpg" width="200" height="150" border="0"></a></p>                  </td>
+                <td valign="bottom"><table width="100%" height="150"  border="0" cellpadding="5" cellspacing="0">
+                    <tr>
+                      <td valign="top" class="title"><div align="left">Lightwave 3D Integration <span class="bodyCopy"><a href="tutL3D_print.htm"> <br>
+                        </a></span><span class="indexLinks"><a href="tutL3D_print.htm">Printable Version</a><br>
+                        <a href="javascript:quicktimeWindow('L3DInt')">Quicktime Sample </a><br>
+                        <br>
+                        </span></div></td>
+                    </tr>
+                    <tr>
+                      <td valign="bottom"><p class="heading">Objective</p>
+                        <p class="bodyCopy"> Gather 3D motion, rotation, and size information from a scene in Lightwave and apply it to a Digital Fusion flow. </p>
+                        </td>
+                    </tr>
+                  </table>                  </td>
+              </tr>
+            </table>              </td>
+          </tr>
+          <tr>
+            <td><p class="heading"><br>
+              Procedure</p>
+              <p class="bodyCopy">01) Create a Loader using the M3D_Materials\Footage\M3D_Logo footage. </p>
+              <p class="bodyCopy">02) Drag the Loader to the time bar on the bottom of the screen to set the render range. Show the Loader in the left view, and play through the whole sequence one time. </p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/step_02.jpg" width="239" height="59"></p>
+              <p class="bodyCopy">03) Add a Merge tool after the Loader. Be sure that the Loader is going into the background (gold) input on the Merge. </p>
+              <p class="bodyCopy">04) Create a pEmitter tool, followed by a pRender tool. Connect the output of the pRender tool to the foreground (green) input of the Merge tool. </p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/step_04.jpg" width="277" height="193"></p>
+              <p class="bodyCopy">05) Select the pRender tool and click on the Controls tab. Check the Generate Z Buffer option. Also select the Merge tool and click on the Channels tab. Make sure Perform Depth Merge is selected. These options are necessary to merge the M3D_Logo footage with the rendered particles correctly. </p>
+              <p class="bodyCopy">06) Bring the Merge tool up on the right view. </p>
+              <p class="bodyCopy">07) Go to frame 0, select the pEmitter tool, and set the Number to 1600. Set the Lifespan to 180. Animate the Number property. Go to frame 1 and decrease the Number to 0. </p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/step_07.jpg" width="294" height="306"></p>
+              <p class="bodyCopy">08) From this point on, you can let the flow play back in a loop as to see the effects of each step as they are being completed. </p>
+              <p class="bodyCopy">09) On the pEmitter tool, select the Region tab and change the Region to a Cube. Set the following values based on the Lightwave scene used to create the M3D_Logo footage: X=900 | Y=-180 | CenterZ=40 | Width=2500 | Height=4000 | Depth=4000. </p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/step_09.jpg" width="292" height="318"></p>
+              <p class="bodyCopy">10) Click on the Style tab and change the Style to Blob. Open the Size Controls Drop down. Set the size to 600 and the Size Variance to 100. </p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/step_10.jpg" width="293" height="414"></p>
+              <p class="bodyCopy">11) Select the pRender tool and click on the Scene tab. Open the Rotation and Translation drop downs. </p>
+              <p class="bodyCopy">12) Right click on the X Rotation and select Modify With--&gt;Expression. Repeat this for the Y/Z rotations and the X/Y/Z offsets.</p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/step_12.jpg" width="291" height="562"></p>
+              <p class="bodyCopy">13) Click on the Modifiers tab. Open up the X Rotation expression. Animate the Number In 1 property. Repeat this process for all of the other expressions. </p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/step_13.jpg" width="293" height="672"></p>
+              <p class="bodyCopy">14) Click on the Spline tab. Click on the &quot;One&quot; button to view only one spline at a time. Select the pRender--&gt;X Rotation--&gt;Number 1 spline. Right click on it and select Import Spline. Pick the Cam_X_Rot.spl file under the M3D_Materials\Splines folder. Repeat this process for the rest of the Number In splines. </p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/step_14.jpg" width="300" height="427"></p>              <p class="bodyCopy">15) Once all of the splines are imported, select the Modifiers tab on the pRender tool again. Start with the X Rotation Expression. Select the Number Out tab. Type (360 * n1) / (2 * pi) in the box. This will convert the radian values given from Lightwave into degree values for use with Fusion. Repeat this for the other rotation expressions. </p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/step_15.jpg" width="291" height="131"></p>
+              <p class="bodyCopy">16) Select the X Offset expression. Select the Number Out tab. Type -n1 in the box. This will invert the splines given from Lightwave for use with Fusion. Do this also with the Z Offset expression. For the Y Offset expression, just type n1 in the box without the minus sign because this spline does not need to be inverted. </p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/step_16.jpg" width="291" height="248"></p>              <p class="bodyCopy">17) That's basically it! At this point, it should look like the particles were included in the original Lightwave render!</p>
+              <p class="bodyCopy">&nbsp;</p></td>
+          </tr>
+          <tr>
+            <td><p class="bodyCopy"><span class="heading">Extras</span></p>
+              <p class="bodyCopy">- If you would like, you can select the pRender tool in the Flow, click on the Tools tab, and turn on Motion Blur under the Radioactive Symbol. This will increase render time, but may result in a more realistic composite.</p>
+              <p align="center" class="bodyCopy"><img src="images/l3DInt/extra.jpg" width="293" height="415"><br>
+                  <br>
+              </p></td>
+          </tr>
+        </table>        </td>
+      </tr>
+    </table>
+	  
+    </td>
+    <td class="bottom_bg">&nbsp;</td>
+  </tr>
+  <tr bgcolor="#675330">
+    <td height="15" class="bottom_bg">&nbsp;</td>
+    <td height="15" align="left" valign="top" class="bottom_bg"><div align="center"><span class="bodyCopy"><a href="http://www.media3d.com" target="_blank">&copy;2004 MEDIA DIMENSIONS - All Rights Reserved</a></span></div></td>
+    <td height="15" class="bottom_bg">&nbsp;</td>
+  </tr>
+</table>
+<map name="Map">
+  <area shape="rect" coords="464,113,675,128" href="http://www.media3d.com" target="_blank">
+</map>
+</body>
+</html>

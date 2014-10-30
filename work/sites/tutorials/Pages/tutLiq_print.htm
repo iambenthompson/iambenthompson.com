@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Media Dimensions - Liquid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style type="text/css">
+<!--
+body {
+	background-color: #32383F;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+
+<link href="css/allText.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body>
+<table width="600"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><p class="heading"><img src="images/liquid/objective.jpg" width="200" height="150"></p></td>
+          <td valign="bottom"><table width="100%" height="150"  border="0" cellpadding="5" cellspacing="0">
+              <tr>
+                <td valign="top" class="title"><div align="left">Liquid<span class="bodyCopy"><a href="tutLiq_print.htm"> </a></span></div></td>
+              </tr>
+              <tr>
+                <td valign="bottom"><p class="heading">Objective</p>
+                    <p class="bodyCopy"> Using Digital Fusion's particle system, form a piece of text from liquid globules and then cause it to splatter apart.</p></td>
+              </tr>
+          </table></td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><p class="heading"><br>
+        Procedure</p>
+        <p class="bodyCopy">01) Set the render range from 0 to 150. </p>
+        <p align="center" class="bodyCopy"><img src="images/liquid/step_01_01.jpg" width="249" height="61" align="absmiddle">&lt;---&gt;<img src="images/liquid/step_01_02.jpg" width="249" height="61" align="absmiddle"></p>
+        <p class="bodyCopy">02) Create a Text+ tool and under the Text tab, type 'Fusion' in the Styled Text box. Set the size to 0.2. Bring this tool up on the Left view. Under the Shading tab adjust the color to anything you'd like. </p>
+        <p align="center" class="bodyCopy"><img src="images/liquid/step_02.jpg" width="293" height="264"></p>
+        <p class="bodyCopy">03) Add a pImageEmitter tool, followed by a pRender tool, after the Text+ tool. Bring the pRender tool up on the Right view. The Left and Right view should look identical.</p>
+        <p align="center" class="bodyCopy"><img src="images/liquid/step_03.jpg" width="447" height="107"></p>
+        <p class="bodyCopy">04) Now select the pImageEmitter tool, decrease the X and Y Densities to 0.4 each, and set the Alpha Threshold to 0.15. The higher the Alpha Threshold, the more opaque a pixel will need to be to produce a particle. This will greatly improve render times by eliminating all of the completely transparent pixels. Also, set the Lifespan to 150 so that the particles that do get created will stay alive throughout the whole sequence. </p>
+        <p class="bodyCopy">05) After the pImageEmitter, but before the pRender, add a pTurbulence tool. Play through the sequence and watch what happens on the Right view. </p>
+        <p align="center" class="bodyCopy"><img src="images/liquid/step_05.jpg" width="580" height="99"></p>
+        <p class="bodyCopy">06) Go back to frame 0 and add a pFlock tool after the pTurbulence tool. Set the Flock Number to 6, Follow Strength to 0.9, and Attract Strength to 0.2. Play the whole sequence again. You should see clumps of particles staying somewhat together. If you are not sure, select the pFlock tool and hit CTRL-P. This will turn the tool off, or Pass Through it, and not render its effects. Just remember to hit CTRL-P on pFlock again, once you are done, to turn it back on. </p>
+        <p align="center" class="bodyCopy"><img src="images/liquid/step_06.jpg" width="600" height="58"></p>
+        <p class="bodyCopy">07) Return to frame 0 and add a pPointForce tool after the pImageEmitter tool. Set the Strength to 0.5 and the Power to 2.8. Play through the sequence again to see what this does. </p>
+        <p class="bodyCopy">08) After seeing the effects of the previous step, go to the Region tab on the pPointForce tool, set the Region Mode to &quot;When not inside region,&quot; and set the Region to Sphere. Make sure the pPointForce tool is selected and adjust the Size until the whole word 'Fusion' is inside the circle. The Size will probably be around 0.4. Now the pPointForce tool will only affect particles outside of the Sphere represented by the circle on screen. </p>
+        <p align="center" class="bodyCopy"><img src="images/liquid/step_08.jpg" width="293" height="207"></p>
+        <p class="bodyCopy">09) On frame 0, Animate the Size of the pPointForce Region. On frame 30, set the Size to 0. Play the sequence back.</p>
+        <p class="bodyCopy">10) Select the pImageEmitter tool and go to the Style tab. Set the Style to Blob. Open the drop down menus for Color Controls and Fade Controls. Under Color Controls, open the drop down for Color Variance. Adjust the Red/Green/Blue Variances to Low values of -0.2 and High values of 0.2. Set the Fade Out value, under Fade Controls, to 0.25. </p>
+        <p align="center" class="bodyCopy"><img src="images/liquid/step_10.jpg" width="292" height="516"></p>
+        <p class="bodyCopy">11) At this point, go to the Controls tab on pImageEmitter and activate the Lock Particle Color to Initial Frame option. Play the sequence. </p>
+        <p class="bodyCopy">12) Here is the trick to making it look like liquid. After the pRender tool, add a Filter tool. Set the FilterType to Sobel and bring the Filter tool up on the Right view. Right now, this pulls an outline using all of the particles. What you do now is subtract this outline from the original pRender output. Create a Channel Boolean tool and be sure it is not connected to anything yet. Connect the output of the pRender tool to the Background of the Channel Booleans tool. Now, connect the output of the Filter tool to the Foregroud of the Channel Booleans tool and bring the Channel Booleans tool up on the Right view. Select the Channel Booleans tool and set the Operation to Subtract. Play the sequence.</p>
+        <p align="center" class="bodyCopy"><img src="images/liquid/step_12.jpg" width="411" height="134"></p>
+        <p class="bodyCopy">13) You may notice that some of the droplets gravitate towards the center for a bit too long. You can fix this by selecting the pPointForce tool, going to frame 75, and Animating the Probability property under the Conditions tab. Proceed to frame 80 and drop the Probability to 0. </p>
+        <p class="bodyCopy">14) You are done! Bring the pRender tool up on the Left view, play the whole sequence back once more, and notice the difference that the Filter/Channel Boolean combo makes.</p>
+        <p class="bodyCopy">&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p class="bodyCopy"><span class="heading">Extras</span></p>
+        <p class="bodyCopy">- Try adjusting the properties of the pFlock tool to make the liquid more or less <em>sticky</em>.<br>
+            <br>
+      </p></td>
+  </tr>
+  <tr>
+    <td bgcolor="#675330"><div align="center"><span class="bodyCopy">&copy;2004 MEDIA DIMENSIONS - All Rights Reserved</span></div></td>
+  </tr>
+</table>
+</body>
+</html>

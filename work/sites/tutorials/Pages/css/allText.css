@@ -1,0 +1,36 @@
+.bodyCopy {
+	font-family: Verdana;
+	font-size: x-small;
+	font-style: normal;
+	font-weight: normal;
+	color: #E8F4FA;
+}
+.heading {
+	font-family: Verdana;
+	font-size: x-small;
+	font-style: normal;
+	font-weight: bold;
+	color: #E8F4FA;
+	text-decoration: underline;
+}
+.margins {
+	margin-top: 10px;
+	margin-right: 35px;
+	margin-left: 35px;
+}
+.title {
+
+	font-family: Verdana;
+	font-size: x-large;
+	font-style: normal;
+	font-weight: bold;
+	color: #FF9933;
+}
+.indexLinks {
+	font-family: Verdana;
+	font-size: small;
+	font-style: normal;
+	font-weight: normal;
+	color: #FF9933;
+	text-decoration: underline;
+}
